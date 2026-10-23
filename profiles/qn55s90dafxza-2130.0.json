@@ -1,0 +1,317 @@
+{
+  "profile_version": 1,
+  "model": "QN55S90DAFXZA",
+  "firmware": "T-PTMDAKUC-0090-2130.0",
+  "os": "Tizen 9.0 (BUILD_ID T-PTMDAKUC-0090-REL-202605141701)",
+  "kernel": "Linux 5.4.249 armv7l",
+  "runtime": "6.0.9",
+  "registry": "/opt/dbspace/.pkgmgr_parser.db",
+  "status": "Owner's TV. Doctor and root-check passed. Groups built from this TV's own registry snapshot (original-00); 52 of the U8000F's 54 targets exist here (2 ai-discovery apps absent). Stop markers verified on this TV only for pisa-service and canalysis-service; others are checked by stop-marker.sh before use. The screen-sharing, multi-device, light-shell and shell-extras groups and the airplay/googlecast/bms markers were applied together on this TV (one round) (apps, HDMI inputs and sound checked afterwards; the full restart and standby/wake test is still to be reported).",
+  "groups": {
+    "advertising": {
+      "description": "ACR, viewing-analysis, promotion and advertising components. Package names identify purpose; this is not a traffic audit.",
+      "app_ids": [
+        "com.samsung.tizen.samsung-analytics",
+        "com.samsung.tv.acr",
+        "com.samsung.tv.canalysis-service",
+        "com.samsung.tv.contents-recognition-dbmgr",
+        "com.samsung.tv.adagent-service",
+        "com.samsung.tv.pisa-service",
+        "org.tizen.pisa-control-service",
+        "com.samsung.tv.targeted-ad-service",
+        "yL49PNFmjW.PromotionApp",
+        "yL49PNFmjW.service"
+      ]
+    },
+    "voice": {
+      "description": "Bixby, Alexa, wake-word and voice UI. Opt in only if voice functions are unwanted. S90D adds far-field mic listener and voice-ID service (found running on this TV).",
+      "app_ids": [
+        "com.samsung.tv.alexa-client",
+        "com.samsung.tv.alexa-fullscreen-app",
+        "com.samsung.tv.bixby-context-client",
+        "com.samsung.tv.bixby-prov",
+        "com.samsung.tv.bixbycapsuleviewer",
+        "com.samsung.tv.mybixby",
+        "com.samsung.tv.ondevice-voice",
+        "com.samsung.tv.utterance-recommender-app",
+        "com.samsung.tv.utterance-recommender-core",
+        "com.samsung.tv.voice-instant-app",
+        "com.samsung.tv.voiceassistant-music",
+        "com.samsung.tv.wakeup-engine-alexa",
+        "com.samsung.tv.wakeup-engine-bixby",
+        "org.tizen.voice-app",
+        "org.tizen.voice-app-service",
+        "org.tizen.voice-client",
+        "org.tizen.voice-onboarding",
+        "com.samsung.tv.farfieldvoice",
+        "com.samsung.tv.voiceid-service"
+      ]
+    },
+    "context": {
+      "description": "AI/context suggestions and content-grab features. May remove useful smart functions.",
+      "app_ids": [
+        "com.samsung.tv.AICompanionAgent",
+        "com.samsung.tv.AICompanionUI",
+        "com.samsung.tv.AICompanionUILauncher",
+        "com.samsung.tv.AICompanionUINotice",
+        "com.samsung.tv.context-aware-agent",
+        "com.samsung.tv.context-aware-agent-toast-view",
+        "com.samsung.tv.context-aware-grab-control",
+        "com.samsung.tv.context-aware-server-requester",
+        "com.samsung.tv.context-aware-service",
+        "com.samsung.tv.vif",
+        "content-grab-service"
+      ]
+    },
+    "smart-extras": {
+      "description": "SmartThings, gaming-hub background helpers, health and ambience. Optional; HDMI-focused setup.",
+      "app_ids": [
+        "com.samsung.tizen.smartthings-client",
+        "com.samsung.tv.adplayer",
+        "com.samsung.tv.ambient-sound",
+        "com.samsung.tv.aov-dashboard",
+        "com.samsung.tv.ghdaemon",
+        "com.samsung.tv.ghservice",
+        "com.samsung.tv.health-mde-service",
+        "com.samsung.tv.health-mde-service-view",
+        "com.samsung.tv.smartthingsfind-daemon",
+        "com.samsung.tv.smartthingsfind-ondemand",
+        "samsunghealth-service-tv"
+      ]
+    },
+    "light-shell": {
+      "description": "Sidebar and browser. Apply only after launcher, QuickLaunch bridge and settings routing are validated.",
+      "app_ids": [
+        "com.samsung.tv.home.sidebar",
+        "org.tizen.browser"
+      ]
+    },
+    "tv-plus": {
+      "description": "Samsung TV Plus startup; removes access to that app until restored.",
+      "app_ids": [
+        "HEPsqFNie0.tvplusstandalone",
+        "com.samsung.tv.tvplus",
+        "com.samsung.tv.tvPlusDeeplinker",
+        "com.samsung.tv.slive-daemon"
+      ]
+    },
+    "unused-apps": {
+      "description": "Third-party/preloaded streaming and game apps the owner does not use (owner keeps YouTube, Netflix, Spotify).",
+      "app_ids": [
+        "3KA0pm7a7V.TubiTV",
+        "3KA0pm7a7V.preview",
+        "LBUAQX1exg.Hulu",
+        "MCmYXNxgcu.DisneyPlus",
+        "MCmYXNxgcu.DisneyPlusService",
+        "Ob3XhAVMu6.amcplus",
+        "Ob3XhAVMu6.cwservice",
+        "Ob3XhAVMu6.service",
+        "PvWgqxV3Xa.YouTubeTV",
+        "ZmmGjO6VKO.slingtv",
+        "ZmmGjO6VKO.slingtvBgservice",
+        "XtU8fQk2gN.ESPN",
+        "gzcc4LRFBF.Peacock",
+        "gzcc4LRFBF.service",
+        "gzcc4LRFBF.ContinueWatchingService",
+        "GHI3a0zMSx.XboxGamePass",
+        "GHI3a0zMSx.Service",
+        "CmeyUlnhYY.LunaWebApp",
+        "CmeyUlnhYY.LunaService",
+        "KMZlIHL7Pp.Blacknut1wO",
+        "KMZlIHL7Pp.recentlyPlayedService",
+        "HupEmjIB4I.Glance",
+        "zigzSWa1hy.InstagramAirwave",
+        "AQKO41xyKP.AmazonAlexa",
+        "jAfAs7yVDX.TheSix",
+        "jAfAs7yVDX.rpservice",
+        "org.tizen.primevideo",
+        "org.tizen.primevideo-dummy",
+        "org.tizen.primevideo_companionapp"
+      ]
+    },
+    "unused-features": {
+      "description": "Features the owner said they never use: AirPlay, Google Cast, Art/ambient screensavers, Samsung Health, Gaming Hub, SmartThings app, DeX/Workspace. Non-removable system components are deliberately left alone.",
+      "app_ids": [
+        "com.samsung.tv.airplay-app-2",
+        "com.samsung.tv.airplay-app-2-dummy",
+        "com.samsung.tv.airplay-service-2",
+        "com.samsung.tv.googlecast-app",
+        "com.samsung.tv.googlecast-service",
+        "ByJlgt0XeD.CastSettingsApp",
+        "com.samsung.tv.home.art",
+        "org.tizen.art-app",
+        "com.samsung.tv.ambientfte",
+        "com.samsung.tv.CinemaGraph",
+        "com.samsung.tv.CinemaGraphApp",
+        "com.samsung.tv.GenerativeWallpaper",
+        "com.samsung.tv.flowers-tpl",
+        "com.samsung.tv.islands-tpl",
+        "com.samsung.tv.infinityroom-tpl",
+        "com.samsung.tv.mountainview-tpl",
+        "com.samsung.tv.tranquilnature-tpl",
+        "com.samsung.tv.water-tpl",
+        "com.samsung.tv.samsung-health",
+        "com.samsung.tv.health-mde-setting",
+        "com.samsung.tv.health-mde-workout-tracker",
+        "com.samsung.tv.gaminghub",
+        "com.samsung.tv.SmartThingsApp",
+        "com.samsung.tv.smartthings-partial-app",
+        "com.samsung.tv.samsungdex",
+        "com.samsung.tv.workspace-plugin",
+        "com.samsung.tizen.smartthings-thing"
+      ]
+    },
+    "screen-sharing": {
+      "description": "Screen Mirroring (AirPlay and Google Cast are in unused-features; their always-on services also need the stop markers below).",
+      "app_ids": [
+        "org.tizen.ScreenMirroring-app-tv"
+      ]
+    },
+    "multi-device": {
+      "description": "Multi View, Multi Control, the multi-device framework and phone-based setup. Found running at boot on this TV.",
+      "app_ids": [
+        "com.samsung.tv.multiscreen",
+        "com.samsung.tv.coba.multiscreen",
+        "com.samsung.tv.multiviewsetupapp",
+        "com.samsung.tv.MultiControl-Service",
+        "com.samsung.tv.MultiControlApp",
+        "com.samsung.tv.coba.setting.MultiControl",
+        "com.samsung.tv.mde-framework",
+        "org.tizen.easysetup-daemon",
+        "com.samsung.tv.easysetup-mediator",
+        "com.samsung.tv.easysetup-client"
+      ]
+    },
+    "shell-extras": {
+      "description": "Preview updater, the aria engine (used only by Prime Video, Apple Music and Globoplay here) and TV Plus's separate bms service. Apply with light-shell, after the settings bridge.",
+      "app_ids": [
+        "com.samsung.tv.preview-updater",
+        "com.samsung.tv.aria-engine",
+        "com.samsung.tv.aria-video",
+        "com.samsung.tv.aria-dummy",
+        "org.tizen.bms-service"
+      ]
+    }
+  },
+  "stop_markers": [
+    {
+      "unit": "pisa-service.service",
+      "marker": "pisa-service",
+      "group": "advertising"
+    },
+    {
+      "unit": "canalysis-service.service",
+      "marker": "canalysis-daemon",
+      "group": "advertising"
+    },
+    {
+      "unit": "com.samsung.tv.bixby-prov.service",
+      "marker": "com.samsung.tv.bixby-prov",
+      "group": "voice"
+    },
+    {
+      "unit": "com.samsung.tv.ondevice-voice.service",
+      "marker": "com.samsung.tv.ondevice-voice",
+      "group": "voice"
+    },
+    {
+      "unit": "org.tizen.voice-app.service",
+      "marker": "org.tizen.voice-app",
+      "group": "voice"
+    },
+    {
+      "unit": "org.tizen.voice-client.service",
+      "marker": "org.tizen.voice-client",
+      "group": "voice"
+    },
+    {
+      "unit": "com.samsung.tv.context-aware-agent.service",
+      "marker": "com.samsung.tv.context-aware-agent",
+      "group": "context"
+    },
+    {
+      "unit": "com.samsung.tv.context-aware-service.service",
+      "marker": "com.samsung.tv.context-aware-service",
+      "group": "context"
+    },
+    {
+      "unit": "com.samsung.tv.AICompanionAgent.service",
+      "marker": "com.samsung.tv.AICompanionAgent",
+      "group": "context"
+    },
+    {
+      "unit": "com.samsung.tv.ghdaemon.service",
+      "marker": "com.samsung.tv.ghdaemon",
+      "group": "smart-extras"
+    },
+    {
+      "unit": "samsunghealth-service-tv.service",
+      "marker": "samsunghealth-service-tv",
+      "group": "smart-extras"
+    },
+    {
+      "unit": "slive-provider-daemon.service",
+      "marker": "slive-provider-daemon",
+      "group": "tv-plus"
+    },
+    {
+      "unit": "com.samsung.tv.airplay-service-2.service",
+      "marker": "com.samsung.tv.airplay-service-2",
+      "group": "unused-features"
+    },
+    {
+      "unit": "com.samsung.tv.googlecast-service.service",
+      "marker": "com.samsung.tv.googlecast-service",
+      "group": "unused-features"
+    },
+    {
+      "unit": "bms.service",
+      "marker": "bms",
+      "group": "shell-extras"
+    }
+  ],
+  "runtime_only_masks": [
+    "ipa.service",
+    "contents-recognition-service.service",
+    "org.tizen.tv.sp-kpi.service",
+    "data-service.service"
+  ],
+  "preferences": [
+    {
+      "key": "db/was/preload_by_country",
+      "type": "string",
+      "value": "false"
+    },
+    {
+      "key": "db/menu/autorun_tv_plus",
+      "type": "bool",
+      "value": "0"
+    },
+    {
+      "key": "db/menu/voice/voice_activated",
+      "type": "bool",
+      "value": "0"
+    },
+    {
+      "key": "db/menu/voice/wakeupless_status",
+      "type": "int",
+      "value": "0"
+    },
+    {
+      "key": "db/si_service/voice_recog_enable",
+      "type": "bool",
+      "value": "0"
+    },
+    {
+      "key": "db/multi-assistant/prelaunch_mode",
+      "type": "bool",
+      "value": "0"
+    }
+  ],
+  "was_cache": {
+    "table": "WASConfigTable",
+    "row": "RESERVED_18",
+    "json_path": "$.rsp.preloadByCountry",
+    "after": "false"
+  }
+}

@@ -33,3 +33,15 @@ trademarks remain subject to their owners' terms and are not relicensed by
 this project. Source availability does not imply permission for every reuse.
 The repository and its contributors are not affiliated with Samsung, Sony,
 Nintendo, Microsoft, Amazon or any streaming service.
+
+## PS2-style theme (this fork)
+
+The PS2-style interface imitates the look of Sony's PlayStation 2 system menu.
+No Sony code or assets are distributed. The PS2 font, menu sounds, boot and
+menu videos and ambience are generated locally from the user's own BIOS dump
+(`tools/ps2_assets.py`) or recorded by the user, and are excluded by
+`.gitignore`. `launcher/src/Ps2FontMetrics.cs` holds only glyph widths and the
+atlas layout produced by that tool. The console, PC, Apps and Settings icons,
+the selection bar and the remote-button glyphs in `launcher/assets/ps2/` were
+drawn for this project. PlayStation is a trademark of Sony Interactive
+Entertainment; this project is not affiliated with or endorsed by Sony.

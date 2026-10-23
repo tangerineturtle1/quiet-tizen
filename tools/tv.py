@@ -19,7 +19,8 @@ sys.path.insert(0, str(ROOT / "vendor"))
 from samsung_tv_root.archive_root import probe, _check_target, _capture
 from samsung_tv_root.sdb import SdbClient, find_sdb
 
-PROFILE = json.loads((ROOT / "profiles/un75u8000ffxza-1300.9.json").read_text())
+PROFILES = [json.loads(path.read_text()) for path in sorted((ROOT / "profiles").glob("*.json"))]
+PROFILE = None  # selected by check_identity from the observed model + declared firmware
 STAGE = "/home/owner/share/tmp/sdk_tools/quiet-tizen"
 
 
@@ -49,11 +50,27 @@ def observed_model(client):
 
 
 def check_identity(model, firmware):
-    if model != PROFILE["model"]:
+    global PROFILE
+    for_model = [profile for profile in PROFILES if profile["model"] == model]
+    if not for_model:
         raise ValueError(f"Unsupported model {model!r}; stop and investigate a separate profile.")
-    if firmware != PROFILE["firmware"]:
+    matches = [profile for profile in for_model if profile["firmware"] == firmware]
+    if len(matches) != 1:
         raise ValueError("Supply --firmware with the exact version read from About This TV. "
-                         "Only the documented build is accepted. Do not guess this value.")
+                         "Only a documented build is accepted. Do not guess this value.")
+    PROFILE = matches[0]
+    print("Profile:", PROFILE["model"], PROFILE["firmware"])
+
+
+def script_command(script, arguments=()):
+    # Windows checkouts can carry CRLF line endings; the TV shell needs LF.
+    script = script.replace(b"\r\n", b"\n")
+    if len(script) > 45000:
+        raise ValueError("Script too large for the bounded command channel; split into phases.")
+    encoded = base64.b64encode(script).decode()
+    # Decode on the TV before handing the script to the shell.
+    return (f"printf '%s' {shlex.quote(encoded)} | base64 -d | /bin/sh -s -- "
+            + shlex.join(arguments))
 
 
 def pull_command(remote):
@@ -142,11 +159,7 @@ def main():
         private_path(args.local)
         command = pull_command(args.remote)
     elif args.script:
-        script = args.script.read_bytes()
-        if len(script) > 45000:
-            raise ValueError("Script too large for the bounded command channel; split into phases.")
-        encoded = base64.b64encode(script).decode()
-        command = f"printf '%s' {shlex.quote(encoded)} | /bin/sh -s -- " + shlex.join(args.arg)
+        command = script_command(args.script.read_bytes(), args.arg)
     else:
         if args.arg:
             raise ValueError("--arg requires --script.")

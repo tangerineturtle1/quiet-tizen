@@ -8,8 +8,14 @@ public static class Probe {
  [DllImport("libc.so.6")] static extern void free(IntPtr p);
  [DllImport("libcapi-media-sound-manager-tv.so.0")] static extern int sound_manager_get_master_volume(out int value);
  [DllImport("libcapi-media-sound-manager-tv.so.0")] static extern int sound_manager_get_master_mute(out int value);
+ [DllImport("libsettings-api.so")] static extern bool CSharpGetItemValue(string id,out string name,out string value);
+ [DllImport("libsettings-api.so")] static extern bool CSharpGetItemEnable(string id,out bool enabled);
  public static int Main(string[] args) {
   try {
+   if(args.Length>1 && args[0]=="settings") {
+    for(int i=1;i<args.Length;i++){ string n="",v=""; bool ok=false,en=false; try{ok=CSharpGetItemValue(args[i],out n,out v);}catch(Exception e){n=e.GetType().Name;} try{CSharpGetItemEnable(args[i],out en);}catch{} Console.WriteLine(args[i]+" ok="+ok+" enabled="+en+" name="+n+" value="+v); }
+    return 0;
+   }
    if(args.Length==2 && args[0]=="set-home") {int s=app_operation_set_current_app("http://tizen.org/appcontrol/operation/main",args[1]); Console.WriteLine("set_home="+s);return s==0?0:1;}
    if(args.Length==1 && args[0]=="state") {int v,m;int vr=sound_manager_get_master_volume(out v),mr=sound_manager_get_master_mute(out m);Console.WriteLine("volume="+v+" volume_result="+vr+" mute="+m+" mute_result="+mr);return vr==0&&mr==0?0:1;}
    IntPtr p;int r=app_operation_get_current_app("http://tizen.org/appcontrol/operation/main",out p);

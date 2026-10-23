@@ -1,5 +1,18 @@
 # Quiet Tizen
 
+> **This fork: a PS2-style home screen for a Samsung S90D.** The launcher here
+> imitates the PlayStation 2 system menu: the boot clip, a moving 4K background,
+> the PS2 system font, menu sounds and ambience, an HDMI and app dock, an Apps
+> page, and a settings page with a one-press PC HDMI reconnect. It ran as Home
+> and startup on a `QN55S90DAFXZA`. No Sony material is included: you generate
+> the font and sounds from your own BIOS dump, and record the videos yourself.
+> See **[docs/10-ps2-theme.md](docs/10-ps2-theme.md)**.
+>
+> ![PS2-style Quiet Home on the S90D](docs/images/ps2-home-switch.png)
+>
+> Everything below is the upstream Quiet Tizen guide. It still applies to the
+> install, cleanup and recovery steps.
+
 A practical, agent-readable guide to making a Samsung Tizen TV quieter and
 more useful as an HDMI display.
 
@@ -46,6 +59,8 @@ cleanup compatibility.
 | [Cleanup planner](tools/plan_cleanup.py) | Field-specific apply/restore SQL generated from your own fresh snapshot |
 | [Access helper](tools/tv.py) | Explicit-target SDB preflight, temporary authenticated root, bounded transfers and session cleanup checks |
 | [Recipes](recipes) | Snapshot, stop-marker, launcher, settings-bridge and restoration scripts |
+| [PS2 theme](docs/10-ps2-theme.md) | This fork's PS2-style launcher, the [BIOS asset builder](tools/ps2_assets.py) and the [S90D recipes](recipes/s90d) |
+| [S90D profile](profiles/qn55s90dafxza-2130.0.json) | Cleanup groups and stop markers observed on the S90D case-study TV |
 | [Evidence](evidence/observations.json) | Sanitized observations and the limits of what was verified |
 
 Quiet Home uses Tizen's existing display, audio, HDMI and application stack.

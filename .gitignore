@@ -20,3 +20,9 @@ __pycache__/
 *.tar*
 launcher/assets/app-icons/
 launcher/assets/apps.local.json
+# PS2 theme: generated from the owner's own BIOS dump or recordings; never commit Sony material
+launcher/assets/ps2/font/
+launcher/assets/ps2/sfx/
+launcher/assets/ps2/media/
+*.wav
+*.mp4

@@ -28,7 +28,8 @@ public static class AppLibrary
   foreach(var app in apps)
   {
    if(string.IsNullOrWhiteSpace(app.Name)||string.IsNullOrWhiteSpace(app.Id)||!ids.Add(app.Id)
-      ||string.IsNullOrWhiteSpace(app.Asset)||Path.IsPathRooted(app.Asset)||app.Asset.Contains("..")
+      ||string.IsNullOrWhiteSpace(app.Asset)||app.Asset.Contains("..")
+      ||(Path.IsPathRooted(app.Asset)&&!(app.Asset.StartsWith("/opt/usr/apps/")||app.Asset.StartsWith("/usr/apps/")))
       ||app.Width<=0||app.Height<=0)
    throw new InvalidDataException("Invalid app library entry.");
    var crop=app.Crop;

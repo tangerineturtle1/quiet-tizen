@@ -1,0 +1,72 @@
+{
+ "VideoUnderlay": true,
+ "BootVideo": "",
+ "LoopVideo": "ps2/media/menu_loop.mp4",
+ "Ambience": "ps2/media/ambience.wav",
+ "Cursor": "ps2/sfx/cursor.wav",
+ "Select": "ps2/sfx/select.wav",
+ "Back": "ps2/sfx/back.wav",
+ "CurtainDelayMs": 700,
+ "Dock": [
+  {
+   "Name": "PC",
+   "Subtitle": "HDMI 1",
+   "Action": "hdmi:13",
+   "Icon": "ps2/icons/pc.png",
+   "Group": 0
+  },
+  {
+   "Name": "Switch 2",
+   "Subtitle": "HDMI 2",
+   "Action": "hdmi:14",
+   "Icon": "ps2/icons/handheld.png",
+   "Group": 0
+  },
+  {
+   "Name": "PS5 Pro",
+   "Subtitle": "HDMI 4",
+   "Action": "hdmi:16",
+   "Icon": "ps2/icons/console.png",
+   "Group": 0
+  },
+  {
+   "Name": "YouTube",
+   "Subtitle": "Videos",
+   "Action": "app:com.samsung.tv.cobalt-yt|9Ur5IzDKqV.TizenYouTube",
+   "Icon": "/opt/usr/apps/com.samsung.tv.quickpanel/shared/res/image/broadcasting_logo_big_youtube.png",
+   "Group": 1,
+   "IconW": 140,
+   "IconH": 51,
+   "IconBackground": "#0F0F0F"
+  },
+  {
+   "Name": "Netflix",
+   "Subtitle": "Movies & series",
+   "Action": "app:org.tizen.netflix-app",
+   "Icon": "/opt/usr/apps/org.tizen.netflix-app/shared/res/org.tizen.netflix-app.png",
+   "Group": 1
+  },
+  {
+   "Name": "Spotify",
+   "Subtitle": "Music & podcasts",
+   "Action": "app:rJeHak5zRg.Spotify",
+   "Icon": "/opt/usr/apps/rJeHak5zRg/shared/res/rJeHak5zRg.Spotify.png",
+   "Group": 1
+  },
+  {
+   "Name": "Apps",
+   "Subtitle": "Everything installed",
+   "Action": "page:1",
+   "Icon": "ps2/icons/apps.png",
+   "Group": 2
+  },
+  {
+   "Name": "Settings",
+   "Subtitle": "Sound, picture & system",
+   "Action": "page:2",
+   "Icon": "ps2/icons/settings.png",
+   "Group": 2
+  }
+ ],
+ "BootEndMs": 12450
+}
