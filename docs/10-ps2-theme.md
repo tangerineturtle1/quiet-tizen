@@ -9,12 +9,9 @@ and the Settings-button bridge were checked by the owner. The full
 restart/standby/wake test is still to be reported.
 
 ![Home](images/ps2-home.png)
-![Home, second input focused](images/ps2-home-switch.png)
 ![Settings](images/ps2-settings.png)
 
-*Screens captured from the TV's graphics layer. The moving PS2 background video
-plays on the TV's video plane behind them, so it isn't in the captures. The
-console icons are this repository's generic placeholders.*
+*Home and Settings on the TV, with the moving PS2 background behind the UI.*
 
 ## What it does
 

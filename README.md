@@ -8,7 +8,7 @@
 > the font and sounds from your own BIOS dump, and record the videos yourself.
 > See **[docs/10-ps2-theme.md](docs/10-ps2-theme.md)**.
 >
-> ![PS2-style Quiet Home on the S90D](docs/images/ps2-home-switch.png)
+> ![PS2-style Quiet Home on the S90D](docs/images/ps2-home.png)
 >
 > Everything below is the upstream Quiet Tizen guide. It still applies to the
 > install, cleanup and recovery steps.
