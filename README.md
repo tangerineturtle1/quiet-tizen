@@ -21,9 +21,9 @@ U8000F)**. It includes **Quiet Home**, a native launcher with a colorful,
 English-language interface, lightweight settings, local app cards and a
 shortcut to native Bluetooth controller pairing.
 
-![Quiet Home layout illustration](docs/quiet-home-preview.svg)
+![PS2-style Quiet Home settings page](docs/images/ps2-settings.png)
 
-*Layout illustration with the public text-only app cards. Input labels are configurable.*
+*The PS2-style settings page on the S90D. Input labels and dock apps are configurable.*
 
 It also includes targeted cleanup profiles, source-build tools and rollback
 recipes. **It is a working case study with a reusable toolkit, not a universal
